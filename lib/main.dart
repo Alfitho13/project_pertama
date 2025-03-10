@@ -109,7 +109,7 @@ class _HomeScreenState extends State<HomeScreen> {
               crossAxisCount: 2, // Tampilkan 2 item per baris
               crossAxisSpacing: 10,
               mainAxisSpacing: 10,
-              childAspectRatio: 0.8, // Atur proporsi grid agar lebih seimbang
+              childAspectRatio: 1.4, // Atur proporsi grid agar lebih seimbang
               ), 
               itemCount: produk.length,
               itemBuilder: (context, index){
@@ -153,14 +153,14 @@ class ProdukCard extends StatelessWidget{
   final String imageURL;
   // final VoidCallback onPressed; 
 
- const ProdukCard({required this.name, required this.price, required this.imageURL});
+const ProdukCard({required this.name, required this.price, required this.imageURL});
 
   @override
   Widget build(BuildContext context) {
     return Card(
-  margin: const  EdgeInsets.all(10),
+  margin: const  EdgeInsets.all(5),
   child: Padding(
-    padding: const EdgeInsets.all(2),
+    padding: const EdgeInsets.all(0),
     child: Row(
       mainAxisAlignment: MainAxisAlignment.center,
       crossAxisAlignment: CrossAxisAlignment.center,
@@ -175,7 +175,7 @@ class ProdukCard extends StatelessWidget{
         const SizedBox(width: 10), // Jarak antara gambar dan teks
         Expanded(
           child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
+            // crossAxisAlignment: CrossAxisAlignment.start,
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Text(name, style: const TextStyle(fontWeight: FontWeight.bold)),
